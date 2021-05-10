@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -28,7 +28,8 @@
     @apply bg-blue-300;
   }
 
-  .hero .hero-image, .hero .hero-caption {
+  .hero .hero-image,
+  .hero .hero-caption {
     min-height: 90vh;
   }
   .hero .hero-cta {
@@ -46,9 +47,9 @@
   }
 }
 
-
 @screen md {
-  .hero .hero-image, .hero .hero-caption {
+  .hero .hero-image,
+  .hero .hero-caption {
     min-height: auto;
   }
   .hero .hero-cta {
@@ -62,8 +63,15 @@
     @apply absolute inset-0 z-10 cursor-pointer;
   }
 
-  .grid { 
+  .grid {
     grid-auto-flow: dense;
     grid-auto-rows: minmax(180px, auto);
   }
+}
+
+a.cart svg g circle.dot {
+  @apply hidden;
+}
+a.cart.cart-filled svg g circle.dot {
+  @apply block;
 }
